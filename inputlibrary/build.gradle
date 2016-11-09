@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:24.2.0'
+}
+//添加
+publish {
+    userOrg = '624104244'//组织名称
+    groupId = 'com.github.siyehua'//jar包名称,自定义
+    artifactId = 'inputview'//package
+    publishVersion = '1.0.1'//version
+    desc = 'input text with a view'//描述，不重要
+    website = 'https://github.com/siyehua'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}
