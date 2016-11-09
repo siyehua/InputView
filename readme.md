@@ -2,7 +2,7 @@
 A view solve the layout change problem when the softKeyBoard show.
 
 ##Getting Started
-You can add the cod into your module build.gradle
+You can add the code into your module build.gradle
 ```java
 dependencies {
     compile 'com.github.siyehua:inputview:1.0.1'
@@ -43,7 +43,7 @@ more information, you can [click](/app/src/main/java/com/siyehua/inputsoft/Start
 4. user input text, call back the text
 
 ##Demo
-![demo-git](/demo_git.gif)
+ <img src="/demo_git.gif" width = "240" height = "427" alt="demo" align=center />
 
 more information, you can [click](/app/src/main/java/com/siyehua/inputsoft/StartActivity.java).
 
